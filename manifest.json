@@ -18,8 +18,14 @@
       "sizes": "512x512"
     }
   ],
+  "homepage": "https://ankleshwar-dwivedi.github.io/alumni-build", 
   "start_url": ".",
   "display": "standalone",
   "theme_color": "#000000",
-  "background_color": "#ffffff"
+  "background_color": "#ffffff",
+  "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "react-scripts build && cp build/index.html build/404.html"
+    
 }
